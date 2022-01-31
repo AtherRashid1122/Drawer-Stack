@@ -11,11 +11,15 @@ const Stack = createStackNavigator();
 import Login from '../../Screens/Login/Login';
 import Splash from '../../Screens/Splash/Splash';
 import DrawerNavigator from '../Drawer/Drawer';
-import CreateAccount from '../../Screens/CreateAccount/CreateAccount';
+
+import Projectupdate from '../../Screens/Projectupdate/Projectupdate';
 import Home from '../../Screens/Home/Home';
 // import InstantBuy from './src/screens/App/InstantBuy/InstantBuy';
 //import {connect} from 'react-redux';
 import AsyncStorage from '@react-native-community/async-storage';
+import LoginFileds from '../../Screens/Login/LoginFileds';
+import DashBoard from '../../Screens/DashBoard/DashBoard';
+import componentName from '../../Screens/Home/Home';
 const Navigation = ({getUserBalance, user, isLoggedIn}) => {
   const Tab = createBottomTabNavigator();
 
@@ -64,9 +68,25 @@ const Navigation = ({getUserBalance, user, isLoggedIn}) => {
           name="EnterOtp"
           options={{headerShown: false}}
         /> */}
+
+<Stack.Screen
+          component={componentName}
+          name="componentName"
+          options={{headerShown: false}}
+        />
+              <Stack.Screen
+          component={Home}
+          name="Home"
+          options={{headerShown: false}}
+        />
               <Stack.Screen
           component={Login}
           name="Login"
+          options={{headerShown: false}}
+        />
+                <Stack.Screen
+          component={LoginFileds}
+          name="LoginFileds"
           options={{headerShown: false}}
         />
         <Stack.Screen
@@ -75,15 +95,11 @@ const Navigation = ({getUserBalance, user, isLoggedIn}) => {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          component={CreateAccount}
-          name="CreateAccount"
+          component={Projectupdate}
+          name="Projectupdate"
           options={{headerShown: false}}
         />
-        <Stack.Screen
-          component={Home}
-          name="Home"
-          options={{headerShown: false}}
-        />
+  
  
       </Stack.Navigator>
     </NavigationContainer>

@@ -2,20 +2,21 @@ import React from 'react';
 import {Text, View, Image, ImageBackground, StatusBar} from 'react-native';
 import SplashImage from '../../Utils/Icons/splash.svg';
 import {hp} from '../../Constants/responsive';
-import CreateAccount from '../CreateAccount/CreateAccount';
+
+import Projectupdate from '../Projectupdate/Projectupdate';
 import styles from './Styles';
 const Splash = ({route, navigation}) => {
   window.setTimeout(async () => {
     // navigation.navigate('Root');
-    navigation.navigate('Login');
+    navigation.navigate('Root');
 
   }, 2120);
 
   return (
 
-<View style={styles.container}>
+<View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
 
-<Image style={styles.imagesize} source={require('../../Utils/Icons/logo.png')} >
+<Image style={{height:200,width:'50%'}} source={require('../../Utils/Icons/drawericon.png')} >
 
 </Image>
 </View>

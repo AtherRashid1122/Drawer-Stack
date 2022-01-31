@@ -2,9 +2,16 @@ import { StyleSheet ,Dimensions} from "react-native";
 const height=Dimensions.get('window').height
 const styles = StyleSheet.create({
 container: {
+
+   
+     
     backgroundColor:'#4087EA',
-    //  flex: 1, 
-     flexGrow: 1
+    flex: 1, 
+    shadowOpacity:0.6,
+    
+    
+    
+    
      
 },
  imagesize: { 
@@ -15,9 +22,7 @@ container: {
         margin:20
     },
     loginbackground:{
-        height:height/1.51,
-        // height:height,
-
+        height:height/1.55,
         // backgroundColor:'#3E95D6'
     backgroundColor:'#4087EA',
 
@@ -52,11 +57,11 @@ container: {
         width:'90%',
                
     },
-    imageadjust:{height:height/1.56,marginTop:-80,},
+    imageadjust:{height:height/1.56,marginTop:-80,justifyContent:'center',alignContent:'center',alignItems:'center'},
     loginview:{
-        backgroundColor:'#1E3D76',height:height,opacity:0.8,  backgroundColor:  '#1E3D76',
-        color:'#FFFFFF', marginTop:-100  
-    
+        height:height,  
+        color:'#FFFFFF',
+        marginTop:-10
     },
     loginbutton:{width:'100%',height:height/15,justifyContent:'center',alignContent:'center',alignItems:'center'},
     logintext:{
@@ -76,7 +81,11 @@ container: {
     },
     signin:{flexDirection:'row',height:height/14,justifyContent:'center',alignContent:'center',alignItems:'center',width:'100%'},
     bottomsection:{flexDirection:'row',justifyContent:'center',alignContent:'center',alignItems:'center',height:40,},
-    authbutton:{flexDirection:'row',width:'40%',justifyContent:'center',justifyContent:'space-around'}
+    authbutton:{flexDirection:'row',width:'40%',justifyContent:'center',justifyContent:'space-around'},
+    outer:{height:200,width:'80%',marginTop:200,alignItems:'center',alignContent:'center'},
+    inside:{flexDirection:'row',backgroundColor:'white',alignContent:'center',alignItems:'center',width:'90%',borderRadius:5},
+    iconstyle:{marginLeft:10,color:'#7B6F72',marginRight:5},
+    password:{flexDirection:'row',backgroundColor:'white',alignContent:'center',alignItems:'center',width:'90%',marginTop:20,borderRadius:5}
 
     })
 
